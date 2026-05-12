@@ -24,10 +24,10 @@ interface Product {
 ```
 
 ## 🚀 Flujo de Trabajo
-1. **Mati**: Define el `db.json` siguiendo el contrato de arriba.
-2. **Lean**: Configura el `AppRouter` apuntando a las páginas de los módulos.
-3. **Eze**: Implementa el store de Auth en `zustand`.
-4. **Edgar**: Crea los hooks con `TanStack Query` para el CRUD de productos.
+1. **Mati**: Define el `db.json` y los servicios de API.
+2. **Lean**: Configura el `AppRouter` y los Layouts.
+3. **Eze**: Implementa el store de Auth y la lógica de login.
+4. **Edgar & Lucas**: Dupla dinámica para el módulo `shopping-list`. Se reparten: uno hace la visualización y filtros, el otro el ABM (Alta, Baja, Modificación) de productos con TanStack Query.
 
 ## 💅 Estándares de Código
 - **Componentes**: PascalCase (ej: `ProductItem.tsx`).
