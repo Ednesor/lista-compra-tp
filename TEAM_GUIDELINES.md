@@ -14,20 +14,21 @@ Para que todo encaje, el objeto **Product** debe tener esta forma:
 
 ```typescript
 interface Product {
-  id: string;          // Generado por json-server
+  id: number;          // Generado por json-server
   name: string;        // Nombre del producto (ej: "Leche")
   quantity: number;    // Cantidad (ej: 2)
-  category: string;    // Categoría (ej: "Lácteos")
-  isCompleted: boolean; // Si ya se compró o no
-  createdAt: string;   // Fecha de creación (ISO string)
+  unit: string;        // Unidad (ej: "kg", "litros", "unidades")
+  done: boolean;       // Si ya se compró o no
 }
 ```
 
+> ⚠️ **Atención equipo:** Este contrato está alineado al enunciado mínimo de la materia. Si usaban `category`, `isCompleted` o `createdAt`, actualicen a `unit` y `done`. El `id` ahora es `number`.
+
 ## 🚀 Flujo de Trabajo
-1. **Mati**: Define el `db.json` y los servicios de API.
+1. **Mati**: (¡MISSION ACCOMPLISHED! ✅) `db.json` listo con 3 productos de prueba. `src/api/index.ts` (`apiClient`) creado para que los demás módulos lo usen.
 2. **Lean**: Configura el `AppRouter` y los Layouts.
-3. **Eze & Lucas**: Dupla para blindar la **Auth**. Manejan el store de sesión, el login y la protección de rutas (PrivateRoutes) para que nadie entre sin permiso.
-4. **Edgar**: (¡MISSION ACCOMPLISHED! ✅) Ya terminó el módulo `shopping-list`.
+3. **Eze & Lucas**: Dupla para blindar la **Auth**. Manejan el store de sesión, el login y la protección de rutas (PrivateRoutes) para que nadie entre sin permiso. Usar `apiClient` de `src/api` para las llamadas HTTP.
+4. **Edgar**: (¡MISSION ACCOMPLISHED! ✅) Ya terminó el módulo `shopping-list`. ⚠️ Pendiente: alinear su `productsService` al nuevo contrato (`unit`/`done` en vez de `category`/`isCompleted`/`createdAt`, `id: number`).
 
 ## 💅 Estándares de Código
 - **Componentes**: PascalCase (ej: `ProductItem.tsx`).

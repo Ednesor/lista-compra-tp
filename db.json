@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Leche",
+      "quantity": 2,
+      "unit": "litros",
+      "done": false
+    },
+    {
+      "id": 2,
+      "name": "Pan",
+      "quantity": 1,
+      "unit": "unidades",
+      "done": true
+    },
+    {
+      "id": 3,
+      "name": "Tomate",
+      "quantity": 1,
+      "unit": "kg",
+      "done": false
+    }
+  ]
+}
